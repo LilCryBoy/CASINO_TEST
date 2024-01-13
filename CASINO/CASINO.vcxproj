@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{51125829-8D6B-483E-A21E-27DC7F1EA4BF}</ProjectGuid>
@@ -153,17 +156,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="createProcManager.cpp" />
-    <ClCompile Include="Content.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Core.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Content.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="Core.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
