@@ -154,15 +154,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CASINO.cpp" />
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="createProcManager.cpp" />
+    <ClCompile Include="Content.cpp" />
     <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Viewport.cpp" />
+    <ClCompile Include="Core.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="Content.h" />
     <ClInclude Include="Timer.h" />
-    <ClInclude Include="Viewport.h" />
+    <ClInclude Include="Core.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,6 @@
-#include "Viewport.h"
+#include "Core.h"
 int main(int argc, char* argv[])
 {
-
-    Viewport::Tick(true);
+    source::BeginPlay();
     return 0;
 }
