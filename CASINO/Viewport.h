@@ -4,5 +4,5 @@ class Viewport
 {
 public:
     Viewport();
-    bool Tick(bool _TickEnabled); 
+    static void Tick(bool enabled); 
 };

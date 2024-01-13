@@ -1,7 +1,7 @@
 ﻿#include "Viewport.h"
 
+#include "Game.h"
 #include <algorithm>
-#include <iostream>
 #include <ostream>
 
 Viewport::Viewport()
@@ -9,13 +9,13 @@ Viewport::Viewport()
     
 }
 
-bool Viewport::Tick(bool _TickEnabled)
+void Viewport::Tick(bool enabled)
 {
-    while (_TickEnabled)
+    Game::BeginPlay();
+    while (enabled)
     {
-        std::cout << "HELLO WORLD" << std::endl;
-        system("cls");
-    } return false;
+        Game::EventTick();
+    }
 }
 
 
