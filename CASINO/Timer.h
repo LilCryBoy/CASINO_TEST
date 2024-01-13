@@ -1,7 +1,6 @@
-﻿
+﻿//Простой класс таймера
 
-//Простой класс таймера
-
+#pragma once
 #include <chrono>
 #include <functional>
 
