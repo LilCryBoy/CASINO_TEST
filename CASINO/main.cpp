@@ -100,15 +100,12 @@ int main()
         if(count >= X)
             _tWhile = false;
     }
-
-   
-
     if(_tWhile)
     {
         double win = 0.0;
         win = win + stavka * count;
-        balance = balance + stavka + win;
-        std::cout << "Ты выйграл - " << win<< std::endl;
+        balance = balance + stavka * count;
+       // std::cout << "Ты выйграл - " << win<< std::endl;
         _tWhile = false;
         CheckPress = false;
         main();
@@ -120,11 +117,5 @@ int main()
         CheckPress = false;
         main();
     }
-        
-    
-
-    ///std::cout << "Победа"
-   
-    
 }
 
