@@ -2,22 +2,36 @@
 #include <random>
 #include <thread>
 #include <valarray>
-#include <Windows.h>
+//#include <Windows.h>
 #include <chrono>
 #include <functional>
-#include <conio.h>>
+//#include <conio.h>
+//#include <ncurses.h>
+//#include <unistd.h>
 
 
 bool CheckPress = false;
 double stavka;
 double balance = 1000;
+int KeyPOP = 0;
+
+//#define KEY_UP    72
 
 void Check()
 {
     
     std::thread([=]()
     {
-        char ch;
+        while (true)
+        {
+            if(getchar() == KeyPOP)
+            {
+                CheckPress = true;
+                break;
+            }
+        }
+        
+        /*char ch;
         while (true)
         {
             ch = _getch();
@@ -28,6 +42,7 @@ void Check()
                 break;
             }
         }
+        */
     }).detach();
 }
 
@@ -43,24 +58,34 @@ int main()
     double X;
 
     std::random_device rd;
-    std::mt19937 gen(rd());
+    std::mt19937 gen1(rd());
+    std::mt19937 gen3(rd());
+    std::mt19937 gen4(rd());
+    std::mt19937 gen5(rd());
     std::uniform_real_distribution<double> ran1(1, 1.10f);
-    double g1 =  ran1(gen);
+    double g1 =  ran1(gen1);
 
     std::uniform_real_distribution<double> ran2(1, 3);
-    double g3 = ran2(gen);
+    double g3 = ran2(gen3);
 
     std::uniform_real_distribution<double> ran3(1, 10);
-    double g4 = ran3(gen);
+    double g4 = ran3(gen4);
 
     std::uniform_real_distribution<double> ran4(1, 100);
-    double g5 = ran4(gen);
+    double g5 = ran4(gen5);
 
 
     bool _tWhile = true;
     double count = 0.0;
 
-
+    while (true)
+    {
+        std::cout << "НАДМИ НА КНОПКУ КОТОРАЯ БУДЕТ СТОПИТЬ ПРОКРУТКУ " << std::endl;
+        KeyPOP = getchar();
+        std::cout << KeyPOP << std::endl;
+        break;
+    }
+    
 
     std::cout << "Твой баланс - " << balance << std::endl;
     std::cout << "Поставь ставку" << std::endl;
